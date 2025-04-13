@@ -7,5 +7,6 @@ return {
     -- Only one of these is needed.
     'nvim-telescope/telescope.nvim', -- optional
   },
+  keys = require 'custom.plugins.keys.neogit-keys',
   config = true,
 }

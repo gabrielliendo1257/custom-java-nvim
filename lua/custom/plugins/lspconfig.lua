@@ -4,7 +4,7 @@ return {
   lazy = false,
   dependencies = {
     --   -- Automatically install LSPs and related tools to stdpath for Neovim
-    { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+    'williamboman/mason.nvim', -- NOTE: Must be loaded before dependants
     --   'williamboman/mason-lspconfig.nvim',
     --   'WhoIsSethDaniel/mason-tool-installer.nvim',
     --
@@ -17,7 +17,7 @@ return {
     'hrsh7th/nvim-cmp',
   },
   keys = require 'custom.plugins.keys.lsp-keys',
-  config = function(plugin, opts)
+  config = function(_, _)
     require 'custom.plugins.config.lsp-config'
   end,
 }

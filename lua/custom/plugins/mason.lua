@@ -12,6 +12,7 @@ return {
           'black', -- python formatter
           'mypy', -- python linter
           'eslint_d', -- js linter
+          'basedpyright',
         },
       },
     },

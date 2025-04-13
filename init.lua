@@ -1,37 +1,3 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-========                                    .-----.          ========
-========         .----------------------.   | === |          ========
-========         |.-""""""""""""""""""-.|   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||   KICKSTART.NVIM   ||   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||                    ||   |-----|          ========
-========         ||:Tutor              ||   |:::::|          ========
-========         |'-..................-'|   |____o|          ========
-========         `"")----------------(""`   ___________      ========
-========        /::::::::::|  |::::::::::\  \ no mouse \     ========
-========       /:::========|  |==hjkl==:::\  \ required \    ========
-========      '""""""""""""'  '""""""""""""'  '""""""""""'   ========
-========                                                     ========
-=====================================================================
-=====================================================================
-
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-
-
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
-
--- [[ Setting options ]]
--- See `:help vim.opt`
---  NOTE: You can change these options as you wish!
---  WARNING: operns
---  For more options, you can see `:help option-list`
-
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -79,17 +45,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins you can run
---    :Lazy update
---
--- NOTE: Here is where you install your plugins.
 
 local opts = {
   change_detection = {
@@ -124,6 +79,5 @@ local opts = {
 }
 
 require 'bootstrap.options'
--- require 'bootstrap.autocmds'
 
 require('lazy').setup('custom.plugins', opts)

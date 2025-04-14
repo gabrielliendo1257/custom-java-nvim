@@ -24,7 +24,7 @@ lspconfig.html.setup {
 }
 
 lspconfig.basedpyright.setup {
-  before_init = function(_, config)
+  init = function(_, config)
     config.settings.python.analysis.stubPath = vim.fs.joinpath(vim.fn.stdpath 'data', 'lazy', 'python-type-stubs')
   end,
   capabilities = capabilities,

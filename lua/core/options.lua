@@ -46,11 +46,3 @@ vim.opt.smartcase = true -- match case if explicitly stated
 
 vim.g.mapleader = ' '
 vim.opt.wrap = false
-
-vim.api.nvim_create_autocmd("TermOpen", {
-    pattern = "*",
-    callback = function()
-        vim.opt_local.wrap = false
-    end,
-})
-

@@ -78,4 +78,5 @@ local opts = {
 }
 
 require('core').initializer()
+require 'core.autocmds'
 require('lazy').setup('custom.plugins', opts)

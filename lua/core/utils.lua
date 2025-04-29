@@ -52,6 +52,8 @@ M.is_windows = vim.loop.os_uname().sysname == 'Windows_NT'
 
 M.is_linux = vim.loop.os_uname().sysname == 'Linux'
 
+M.is_termux = vim.loop.os_uname().system == 'Linux' and vim.loop.os_uname().machine == 'aarch64'
+
 -- local log_file_path = vim.fn.stdpath 'data' .. '/my_log.txt'
 --
 -- M.write_log = function(message)

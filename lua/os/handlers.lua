@@ -8,7 +8,6 @@ M.load_lsp = function(lsp_name)
     if servers[lsp_name] ~= nil then
         return servers[lsp_name]
     end
-
 end
 
 return M

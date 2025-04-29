@@ -49,7 +49,7 @@ M.setup = {
         if root and root ~= vim.env.HOME then
             return root
         end
-        local root_lua = util.root_pattern 'lua/'(fname) or ''
+        local root_lua = util.root_pattern 'lua/' (fname) or ''
         local root_git = util.find_git_ancestor(fname) or ''
         if root_lua == '' and root_git == '' then
             return
